@@ -27,7 +27,7 @@ int minsNewYear(int *hour, int *min) {
 double probability(int *A,int *B) {
     int win=0;
     int probability=6;
-    for(int D=0;D<6;D++) {
+    for(int D=0;D<=6;D++) {
         if(D>*A && D>*B || D==*A || D==*B) {
             win++;
         }
@@ -41,11 +41,11 @@ int presses(int *x) {
     int num=*x%10;
     int apartment=0;
     int temp=*x;
+    int total=0;
     while(temp>0) {
         apartment++;
         temp=temp/10;
     }
-    int total=0;
     for(int i=1;i<=num;i++) {
         int max_apartment=4;
         if(i==num) {
